@@ -1,0 +1,16 @@
+#footer {
+    background-color: #05021d;
+    color: red;
+}
+
+#footer h4 {
+    color: #ffffff;
+}
+
+#footer .social-icons a {
+    color: #ffffff;
+}
+
+#footer .social-icons a:hover {
+    color: purple;
+}

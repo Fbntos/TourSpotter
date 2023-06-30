@@ -1,0 +1,47 @@
+body {
+    background-image: url('../img/bg.png');   
+}
+  
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-title {
+    color: white !important;
+}
+
+h1 {
+    color: white;
+}
+
+#first {
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn-primary:hover {
+    background-color: #5500aa;
+    border-color: #4f0055;
+}
+
+.separador {
+    height: 1px ;
+    background-color: #747171 ;
+    margin: 20px 0 ;
+}
+
+.separador-container {
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+  
+.ciudades-container {
+    color: #fff;
+}
