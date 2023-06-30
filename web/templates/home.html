@@ -20,52 +20,22 @@
     <div class="ciudades-container">
         <h1 class="p-3" id="first">Ciudades</h1>
 
-        
-
+        {% for ciudad in ciudades %}
         <section class="py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="{% static 'img/santiago.jpg' %}" alt="Lugar turístico" class="img-fluid rounded">
+                        <img src="{{ciudad.img_url}}" alt="Lugar turístico" class="img-fluid rounded">
                     </div>
                     <div class="col-md-6">
-                        <h2>Santiago</h2>
-                        <p class="lead">La capital de Chile, conocida por su vibrante vida urbana, su rica cultura y su arquitectura histórica.</p>
+                        <h2>{{ciudad.name}}</h2>
+                        <p class="lead">{{ciudad.desc}}</p>
                         <a href="#" class="btn btn-primary">Descubrir</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>Valparaíso</h2>
-                        <p class="lead">Una ciudad portuaria llena de color y encanto, famosa por sus cerros, sus ascensores y su arte callejero.</p>
-                        <a href="#" class="btn btn-primary">Descubrir</a>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="{% static 'img/valparaiso.jpg' %}" alt="Lugar turístico" class="img-fluid rounded">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class=" py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="{% static 'img/puertovaras.jpg' %}" alt="Lugar turístico" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Puerto Varas</h2>
-                        <p class="lead">Ubicada en el sur de Chile, rodeada de hermosos lagos y volcanes, es un destino ideal para los amantes de la naturaleza.</p>
-                        <a href="#" class="btn btn-primary">Descubrir</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% endfor %}
     </div>
 
 
