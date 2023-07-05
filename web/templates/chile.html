@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+  <div class='container'>
+    <h1 class='text-center font-weight-bold'>Sobre Chile</h1>
+  </div>
+
+  <div class='container pt-3'>
+    <div class='row '>
+      <div class='col-lg-6 '>
+        <img src="{% static 'img/chile.png' %}" class="img-fluid rounded ">
+      </div>
+      <div class='col-lg-6 pt-3 bg-card'>
+        <p>Chile es un país situado en la costa suroeste de América del Sur y se extiende a lo largo de una gran longitud, abarcando diversas regiones geográficas. Desde el norte hasta el sur, Chile ofrece una variada y espectacular geografía que incluye desiertos, valles, montañas, lagos, ríos, glaciares y extensas costas.</p>
+        <p>En el norte de Chile, se encuentra el famoso Desierto de Atacama, considerado uno de los desiertos más áridos del mundo. Con su clima seco y paisajes surrealistas, el Desierto de Atacama alberga espectaculares formaciones rocosas, géiseres, lagunas altiplánicas y observatorios astronómicos.</p>
+        <p>En la región central de Chile, se encuentra el Valle Central, conocido por sus fértiles tierras agrícolas y su clima mediterráneo. Aquí se ubican las principales ciudades del país, como Santiago, la capital. Además, en esta zona se encuentran viñedos reconocidos internacionalmente, que producen algunos de los mejores vinos de Chile.</p>
+        <p>Hacia el sur, la geografía de Chile se caracteriza por la presencia de la Cordillera de los Andes y una gran cantidad de volcanes. Destacan el Volcán Villarrica y el Volcán Osorno, que ofrecen oportunidades para el montañismo y el esquí. También se encuentran numerosos lagos, como el Lago Llanquihue y el Lago Todos los Santos, rodeados de bosques y paisajes impresionantes.</p>
+        <p>En la región de la Patagonia, al extremo sur de Chile, se encuentran vastas extensiones de naturaleza virgen, glaciares imponentes y fiordos majestuosos. El Parque Nacional Torres del Paine es uno de los destinos más icónicos de la Patagonia, con sus famosos picos de granito, lagos turquesa y una rica fauna que incluye guanacos, cóndores y pumas.</p>
+        <p>En resumen, Chile ofrece una diversidad geográfica extraordinaria, desde el árido desierto en el norte hasta la impresionante belleza de la Patagonia y la misteriosa Isla de Pascua. Cada región tiene sus propios encantos y atractivos, haciendo de Chile un destino único para los amantes de la naturaleza y la aventura.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador-container pt-5">
+    <hr class="separador">
+  </div>
+
+
+  <div class='container pt-4 pb-2'>
+    <h1 class='text-center font-weight-bold pb-5'>Información Importante</h1>
+    <div class='row justify-content-center'>
+      <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
+        <div class="card bg-card text-white">
+          <img src="https://freesvg.org/img/sivvus_weather_symbols_2.png" class="card-img-top rounded-circle" alt="Imagen">
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Estaciones</h3>
+            <p class="card-text">En Chile el verano es entre enero y marzo y el invierno entre julio y septiembre.</p>
+            <h5>Estación actual</h5>
+            <h6 id='estacion'></h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
+        <div class="card bg-card text-white ">
+          <img src="https://freesvg.org/img/1529053930.png" class="card-img-top rounded-circle" alt="Imagen">
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Idioma</h3>
+            <p class="card-text">En Chile el idioma oficial es el español, pero en el territorio también hay comunidades que hablan lenguas autóctonas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
+        <div class="card bg-card text-white">
+          <img src="https://freesvg.org/img/goldcoin.png" class="card-img-top rounded-circle" alt="Imagen">
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Moneda</h3>
+            <p class="card-text">La moneda oficial de Chile es el peso chileno (CLP).</p>
+            <div>
+              <h5>Valor actual</h5>
+              <h6>1 USD -> $<span id="clp-amount"></span>CLP</h6>
+              <h6>1 EUR -> $<span id="clp-amount-eur"></span>CLP</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador-container pt-1">
+    <hr class="separador">
+  </div>
+
+{% endblock  %}

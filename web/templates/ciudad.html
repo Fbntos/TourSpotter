@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card mt-5">
+            <img src="{{ ciudad.img_url }}" class="card-img-top" alt="{{ ciudad.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ ciudad.name }}</h5>
+                <p class="card-text">{{ ciudad.desc }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock  %}

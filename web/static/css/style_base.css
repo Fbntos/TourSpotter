@@ -14,6 +14,10 @@ h1 {
     color: white;
 }
 
+p {
+    color: white;
+}
+
 #first {
     align-items: center;
     justify-content: center;

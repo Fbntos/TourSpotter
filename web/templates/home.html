@@ -5,8 +5,8 @@
 {% block content %}
 {% load static %}
     <!-- Encabezado -->
-    <div class="container p-5" id="first">
-        <h1 class="p-3">Descubre los mejores lugares turísticos de Chile</h1>
+    <div class="container" id="first">
+        <h1 class="pb-3 font-weight-bold">Descubre los mejores lugares turísticos de Chile</h1>
         <img class="pb-3" src="{% static 'img/logo.png' %}" alt="">
         <p class="pb-3">Desde el extremo norte con el desierto más árido del mundo, hasta el sur austral con hielos eternos y cascadas invertidas, Chile es una invitación difícil de rechazar. Conoce el turismo en Chile, y asómbrate con las experiencias en el extremo sur del mundo.</p>
     </div>
@@ -14,11 +14,10 @@
     <div class="separador-container">
         <hr class="separador">
     </div>
-
     
     <!-- Ciudades -->
     <div class="ciudades-container">
-        <h1 class="p-3" id="first">Ciudades</h1>
+        <h1 class="p-3 font-weight-bold" id="first">Ciudades</h1>
 
         {% for ciudad in ciudades %}
             {% if ciudad.is_active %}
@@ -31,7 +30,7 @@
                             <div class="col-md-6">
                                 <h2>{{ciudad.name}}</h2>
                                 <p class="lead">{{ciudad.desc}}</p>
-                                <a href="#" class="btn btn-primary">Descubrir</a>
+                                <a href="" class="btn btn-primary">Descubrir</a>
                             </div>
                         </div>
                     </div>
@@ -39,8 +38,6 @@
             {% endif %}
         {% endfor %}
     </div>
-
-
     
 {% endblock  %}
 
