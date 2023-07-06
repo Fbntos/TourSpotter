@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="pb-1 font-weight-bold" id="first">Ciudades</h1>
+    <p class="lead text-center pb-3">Explora nuestra selección de ciudades destacadas y descubre los encantos que cada una tiene para ofrecer. Desde paisajes impresionantes hasta rica historia y cultura, estas ciudades te cautivarán con su belleza única y experiencias inolvidables. Sumérgete en la diversidad de destinos que te espera y encuentra tu próxima aventura en estas fascinantes ciudades.</p>
+    <div class="separador-container pb-3">
+        <hr class="separador">
+    </div>
+
+    <div class="row equal-height-row">
+        <div class="card-deck">
+            {% for ciudad in ciudades %}
+                <div class="col-md-4">
+                    <div class="card mb-4 bg-card">
+                        <img src="{{ ciudad.img_url }}" class="card-img-top" alt="Imagen de la ciudad">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">{{ ciudad.name }}</h5>
+                            <p class="lead">{{ ciudad.desc }}</p>
+                            <a href="{% url 'ciudad_detail' ciudad.id %}" class="btn btn-primary">Descubrir</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock  %}

@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-image: url('../img/bg.png');   
 }
@@ -42,10 +47,39 @@ p {
 }
 
 .separador-container {
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 100%; 
+    margin: 0 auto; 
 }
   
 .ciudades-container {
     color: #fff;
+}
+
+.navbar-nav .nav-item.active > .nav-link {
+    color: purple !important;
+    background-color: #fff;
+    font-size: 1.05rem;
+}
+
+.card-img-top {
+    height: 250px;
+}
+
+.custom-button {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button {
+    /* Estilos del botón */
+    position: relative;
+    overflow: hidden;
+}
+
+.equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal-height-row .card {
+    flex: 1 0 100%;
 }

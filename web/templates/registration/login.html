@@ -4,19 +4,23 @@
 
 {% block content %}
 <div class="container pt-5 pb-5" id='login'>
-    <h2>Iniciar sesión</h2>
+    <h2 class='text-center font-weight-bold'>Iniciar sesión</h2>
     <form method='post'>
         {% csrf_token %}
-        <div class="form-group">
-            <label for="username">Usuario:</label>
-            <input type="text" class="form-control" name="username" placeholder="Ingrese su usuario">
-        </div>
-        <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
-        </div>
-        <div class='text-center'>
-            <button type="submit" class="btn btn-primary ">Iniciar sesión</button>
+        <div class='container'>
+            <div class='row justify-content-center'>
+                <div class="form-group col-lg-7">
+                    <label for="username">Usuario:</label>
+                    <input type="text" class="form-control" name="username" placeholder="Ingrese su usuario">
+                </div>
+                <div class="form-group col-lg-7">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
+                </div>
+                <div class='text-center col-lg-7'>
+                    <button type="submit" class="btn btn-primary ">Iniciar sesión</button>
+                </div>
+            </div>
         </div>
     </form>
   </div>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>TourSpotter - Chile</title>{% endblock  %}
+
+{% block content %}
+    <h1 class="text-center">Sobre Nosotros</h1>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12 mb-5">
+                <img src="{% static 'img/tourspotter.png' %}" class="rounded-circle img-thumbnail" alt="Logo">
+            </div>
+        </div>
+        <div class='bg-card'>
+            <div class="col">
+                <p class="lead text-center">Somos un equipo apasionado por los viajes y la exploración. Nuestra misión es brindarte la mejor experiencia turística, mostrándote los destinos más fascinantes y ayudándote a planificar tu próximo viaje de ensueño.</p>
+                <p class="text-center">En TourSpotter, nos esforzamos por ofrecerte información detallada y actualizada sobre los lugares turísticos más destacados de todo el mundo. Nuestro objetivo es inspirarte a descubrir nuevos destinos, sumergirte en diferentes culturas y crear recuerdos inolvidables.</p>
+                <p class="text-center">¡Acompáñanos en esta aventura y déjate llevar por la magia de los viajes!</p>
+            </div>
+        </div>
+    </div>
+{% endblock  %}

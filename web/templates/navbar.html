@@ -1,26 +1,58 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand navbar-title font-weight-bold" href="/">
-      {% load static %}
-      <img src="{% static 'img/favicon/favicon-32x32.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
-      TourSpotter.cl
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto font-weight-bold">
-          <li class="nav-item active">
-              <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/ciudades">Ciudades</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/chile">Sobre Chile</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link disabled" href="/about">Sobre Nosotros</a>
-          </li>
-      </ul>
-  </div>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-light" id='footer'>
+    <a class="navbar-brand navbar-title font-weight-bold" href="/">
+        {% load static %}
+        <img src="{% static 'img/favicon/favicon-32x32.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        TourSpotter.cl
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto font-weight-bold">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item {% if request.path == '/ciudades/' %}active{% endif %}">
+                <a class="nav-link" href="/ciudades">Ciudades</a>
+            </li>
+            <li class="nav-item {% if request.path == '/chile/' %}active{% endif %}">
+                <a class="nav-link" href="/chile">Sobre Chile</a>
+            </li>
+            <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+                <a class="nav-link" href="/about">Sobre Nosotros</a>
+            </li>
+
+            {% if not user.is_authenticated %}
+                <li class="nav-item pl-1 {% if request.path == '/accounts/login/' %}active{% endif %}">
+                    <a class="nav-link" href="/accounts/login"><i class="fas fa-user"></i>  Ingresar</a>
+                </li>
+            {% else %}
+                <li class="nav-item pl-1">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt"></i>  Salir
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+  </nav>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Cerrar sesión</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <p class='text-dark'>¿Estás seguro de que deseas salir?</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <a href="{% url 'logout' %}" class="btn btn-primary">Salir</a>
+            </div>
+        </div>
+        </div>
+    </div>
