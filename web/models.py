@@ -10,3 +10,5 @@ class Ciudad(models.Model):
 
     def __str__(self) -> str:
         return f'{self.name}'
+
+
