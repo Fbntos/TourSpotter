@@ -29,5 +29,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path("about/", views.about, name="about"),
-    path("ciudades/", views.ciudades, name="ciudades")
+    path("ciudades/", views.ciudades, name="ciudades"),
+    path("get_all/", include('api.urls'), name="get_all"),
+    path("api/", include('api.urls'), name="filter")
 ]
