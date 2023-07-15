@@ -1,6 +1,7 @@
 import requests
+from decouple import config
 
-API_KEY = 'f78b6f4f6f4ac2fb4459d0c6376dce54'
+API_KEY = config('API_KEY')
 to_celcius = lambda x : round(float(x) - 273.15, 1)
 lang = 'es'
 
