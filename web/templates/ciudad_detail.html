@@ -13,7 +13,36 @@
                 </div>
             </div>
         </div>
-        <h1>{{info.name}} {{info.temp}} {{info.description}} {{info.pressure}}</h1>
+    </div>
+    <div class="gradient-custom">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100" style="color: #282828;">
+                    <div class="col-md-9 col-lg-9 col-xl-7">
+                        <div class="card mb-4" style="border-radius: 25px;">
+                            <div class="card-body p-4">
+                                <div id="dema1" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="d-flex justify-content-between ">
+                                                <div>
+                                                    <h2 class="display-2"><strong>{{info.temp}}°C</strong></h2>
+                                                    <p class="text-dark mb-0">{{info.name}} | {{info.description}}</p>
+                                                    <p class="text-dark mb-0">Min: {{info.temp_min}}°C - Max: {{info.temp_max}}°C</p>
+                                                </div>
+                                                <div>
+                                                    <img class="me-5" src="{{info.img}}" width="140px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 {% endblock  %}

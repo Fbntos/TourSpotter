@@ -3,27 +3,43 @@
 {% block title %}<title>TourSpotter - Chile</title>{% endblock  %}
 
 {% block content %}
-<div class="container pt-5 pb-5" id='login'>
-    <h2 class='text-center font-weight-bold'>Iniciar sesión</h2>
-    <form method='post'>
-        {% csrf_token %}
-        <div class='container'>
-            <div class='row justify-content-center'>
-                <div class="form-group col-lg-7">
-                    <label for="username">Usuario:</label>
-                    <input type="text" class="form-control" name="username" placeholder="Ingrese su usuario">
-                </div>
-                <div class="form-group col-lg-7">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
-                </div>
-                <div class='text-center col-lg-7'>
-                    <button type="submit" class="btn btn-primary ">Iniciar sesión</button>
+<form action="{% url 'login'%}" method="post">
+    {% csrf_token %}
+    <div class="container'py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 ">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-darker text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4">
+                            <h2 class="fw-bold mb-2 text-uppercase">Iniciar Sesión</h2>
+                            <p class="text-white-50 mb-5">Ingresa tu usuario y clave para poder continuar!</p>
+                            <div class="mb-4">
+                                <label for="username" class="form-label"><strong>Usuario</strong></label>
+                                <input type="text" class="form-control" name="username" placeholder="Ingrese su usuario" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="password" class="form-label"><strong>Contraseña</strong></label>
+                                <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" required>
+                            </div>
+                            <p class="text-center pt-5 pb-3 ">¿No tienes cuenta? <a href="{% url 'registro'%}">Regístrate Aquí</a></p>
+                            <button type="submit" class="btn btn-outline-light btn-lg px-5 btn btn-primary text-white ">Iniciar sesión</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </form>
-  </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
 {% endblock  %}
 
 

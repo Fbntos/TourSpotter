@@ -9,3 +9,7 @@ background-color: #05021d;
 .text-white {
 color: #fff;
 }
+
+.bg-darker {
+    background-color: #201f1f; 
+}

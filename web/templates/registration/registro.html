@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>TourSpotter - Chile</title>{% endblock  %}
+
+{% block content %}
+    <form method='post'>
+        {% csrf_token %}
+        <div class="container'py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100 ">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-darker text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <div class="mb-md-5 mt-md-4">
+                                <h2 class="fw-bold mb-2 pb-3 text-uppercase">Registro</h2>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label"><strong>Usuario</strong></label>
+                                    <input type="text" class="form-control" name="username" placeholder="Usuario" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label"><strong>Email</strong></label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label"><strong>Contraseña</strong></label>
+                                    <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+                                </div>
+                                <div>
+                                    <label for="password" class="form-label"><strong>Confirme contraseña</strong></label>
+                                    <input type="password" class="form-control" name="conf_password" placeholder="Confirmar contraseña" required>
+                                </div>
+                                <div class="pt-5 ">
+                                    <button type="submit" class="btn btn-outline-light btn-lg px-5 btn btn-primary text-white">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            {% if error_message %}
+                                <div class="alert alert-danger col-8 mx-auto" role="alert">
+                                    <p class="text-dark text-center">{{error_message}}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        {% comment %} <div class='container'>
+            <div class='row justify-content-center '>
+                <div class="form-group col-lg-7">
+                    <label for="username">Ingrese su usuario:</label>
+                    <input type="text" class="form-control" name="username" placeholder="Usuario" required>
+                </div>
+                <div class="form-group col-lg-7">
+                    <label for="email">Ingrese Email:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group col-lg-7">
+                    <label for="password">Ingrese su contraseña:</label>
+                    <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+                </div>
+                <div class="form-group col-lg-7">
+                    <label for="password">Confirme su contraseña:</label>
+                    <input type="password" class="form-control" name="conf_password" placeholder="Confirmar contraseña" required>
+                </div>
+                <div class='text-center col-lg-7 pt-2'>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </form>
+
+    
+{% endblock  %}
+
+
+

@@ -42,7 +42,6 @@ def get_clima(lon: str, lat:str):
         # En este return se hace un merge, se combinan ambos diccionarios creando uno nuevo con sus clases y valores
         return clima | main
 
-
 dict = get_geo('valdivia')
 lat = dict['lat'] 
 lon = dict['lon']

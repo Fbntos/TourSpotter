@@ -26,10 +26,13 @@ urlpatterns = [
     path('ciudad_detail/<int:ciudad_id>/', views.ciudad_detail, name='ciudad_detail'),
     path("chile/", views.chile, name="sobre_chile"),
     path('admin/', admin.site.urls),
+    
     path('accounts/', include('django.contrib.auth.urls')),
+
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path("about/", views.about, name="about"),
     path("ciudades/", views.ciudades, name="ciudades"),
     path("get_all/", include('api.urls'), name="get_all"),
-    path("api/", include('api.urls'), name="filter")
-]
+    path("api/", include('api.urls'), name="filter"),
+    path("accounts/registro", views.registro, name="registro")
+    ]
