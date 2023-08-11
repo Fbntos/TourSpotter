@@ -48,6 +48,22 @@
         </div>
 
 
+        {% else %}
+            
+        <div class="alert alert-danger col-8 mx-auto" role="alert">
+            <h2 class=" text-center">¡No se ha encontrado ningún registro con el o los filtros ingresados!</h2>
+        </div>
+        
+    {% endif %}
+
+    {% if error_message %}
+        <!-- Mostrar el mensaje de error si existe -->
+        <div class="alert alert-danger col-8 mx-auto" role="alert">
+            <h2 class="text-center">{{ error_message }}</h2>
+        </div>
+    {% endif %}
+    
+    
 
         {% comment %} <div class='container'>
             <div class='row justify-content-center '>

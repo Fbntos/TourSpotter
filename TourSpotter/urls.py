@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 from web import views
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 
@@ -36,3 +37,5 @@ urlpatterns = [
     path("api/", include('api.urls'), name="filter"),
     path("accounts/registro", views.registro, name="registro")
     ]
+
+urlpatterns += staticfiles_urlpatterns()

@@ -11,7 +11,7 @@ from .weather_api import get_clima, get_geo
 def home(request):
     # METODO ALL -> Me retorna un QuerySet con todos los registros.
     # ciudades = Ciudad.objects.all() # -> QuerySet -> Objeto Empaquetado 
-    # for city in ciudades:     
+    # for city in ciudadets:     
     #     print(f'{city.name}')  # -> Desempaquetando el QuerySet
 
 
